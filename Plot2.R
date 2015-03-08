@@ -18,6 +18,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 # Initiating Plot
+par(oma=c(3,3,3,3));
 plot(data$Global_active_power~data$Datetime, 
      type="l",
      xlab="",

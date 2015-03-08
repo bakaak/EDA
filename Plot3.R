@@ -19,6 +19,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 # Initiating Plot
+par(oma=c(3,3,3,3));
 with(data, {
   plot(Sub_metering_1~Datetime, 
        type="l",
@@ -26,6 +27,7 @@ with(data, {
        ylab="Global Active Power (kilowatts)")
   lines(Sub_metering_2~Datetime,col='Red')
   lines(Sub_metering_3~Datetime,col='Blue')
+  
 })
 legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
