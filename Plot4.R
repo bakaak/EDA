@@ -19,7 +19,7 @@ datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
 # Initiating Plot
-par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
+par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(1,1,2,1))
 with(data, {
   plot(Global_active_power~Datetime, 
        type="l",
